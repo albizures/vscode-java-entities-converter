@@ -1,5 +1,5 @@
 {
-  "name": "java-entities-converter",
+  "name": "vscode-java-entities-converter",
   "displayName": "Unicode Characters to Java Entities Converter",
   "description": "Use this to convert unicode characters to java entities",
   "version": "0.0.1",
