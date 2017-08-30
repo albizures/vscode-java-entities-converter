@@ -1,0 +1,57 @@
+{
+  "name": "java-entities-converter",
+  "displayName": "Unicode Characters to Java Entities Converter",
+  "description": "Use this to convert unicode characters to java entities",
+  "version": "0.0.1",
+  "publisher": "albizures",
+  "engines": {
+    "vscode": "^1.14.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:JavaEntities.convertSelection",
+    "onCommand:JavaEntities.convertFile"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "JavaEntities.convertSelection",
+        "title": "Convert Unicode to Java Entities: Selection"
+      },
+      {
+        "command": "JavaEntities.convertFile",
+        "title": "Convert Unicode to Java Entities: File"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "JavaEntities.convertSelection",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "JavaEntities.convertFile"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "chai": "~4.1.1",
+    "eslint": "^3.6.0",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "~2.7.0",
+    "eslint-plugin-node": "~5.1.1",
+    "eslint-plugin-promise": "~3.5.0",
+    "eslint-plugin-standard": "~3.0.1",
+    "mocha": "^2.3.3",
+    "vscode": "^1.0.0"
+  }
+}
