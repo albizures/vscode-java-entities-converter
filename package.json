@@ -2,10 +2,14 @@
   "name": "vscode-java-entities-converter",
   "displayName": "Unicode Characters to Java Entities Converter",
   "description": "Use this to convert unicode characters to java entities",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "publisher": "albizures",
   "engines": {
     "vscode": "^1.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albizures/vscode-java-entities-converter.git"
   },
   "categories": [
     "Other"
@@ -14,7 +18,7 @@
     "onCommand:JavaEntities.convertSelection",
     "onCommand:JavaEntities.convertFile"
   ],
-  "main": "./extension",
+  "main": "./src",
   "contributes": {
     "commands": [
       {
@@ -41,7 +45,8 @@
   "scripts": {
     "lint": "eslint .",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "node ./node_modules/vscode/bin/test",
+    "semantic-release": "semantic-release pre && semantic-release post"
   },
   "devDependencies": {
     "chai": "~4.1.1",
@@ -52,6 +57,7 @@
     "eslint-plugin-promise": "~3.5.0",
     "eslint-plugin-standard": "~3.0.1",
     "mocha": "^2.3.3",
-    "vscode": "^1.0.0"
+    "vscode": "^1.0.0",
+    "semantic-release": "^7.0.2"
   }
 }

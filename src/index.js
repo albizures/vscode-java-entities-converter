@@ -35,9 +35,6 @@ const formatActiveDocument = ranged => {
     const edits = parserDocRanges(active.document, ranges)
     applyEdits(vscode.window.activeTextEditor, ranges, edits)
   }
-
-  vscode.window.showInformationMessage('Converted!')
-  return Promise.resolve()
 }
 
 exports.activate = (context) => context.subscriptions.push(
